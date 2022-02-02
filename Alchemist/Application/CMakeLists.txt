@@ -17,3 +17,6 @@ target_sources(ApplicationStatic PRIVATE
 target_include_directories(ApplicationStatic PUBLIC
         ./
         )
+add_subdirectory(../LoggingSystem build)
+
+target_link_libraries(ApplicationStatic PRIVATE LoggingSystemStatic)
